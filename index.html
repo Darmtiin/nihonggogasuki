@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihongo Ga Suki! - Portal Belajar Bahasa Jepang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR TOP -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="brand" onclick="showFeature('home')">
+                <!-- TAMPILAN LOGO -->
+                <div class="logo-wrapper">
+                    <img src="Logo.png" alt="Logo Nihongo Ga Suki" class="header-logo" onerror="this.src='https://via.placeholder.com/80?text=JP'">
+                </div>
+                <span class="brand-title">日本語が好き<small>Nihongo Ga Suki</small></span>
+            </a>
+       
+            <ul class="nav-menu">
+                <li><a href="javascript:void(0)" class="nav-item active" id="nav-home" onclick="showFeature('home')"><i class="fa-solid fa-house"></i> Beranda</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-kana" onclick="showFeature('kana')"><i class="fa-solid fa-font"></i> Aksara</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-kanji" onclick="showFeature('kanji')"><i class="fa-solid fa-torii-gate"></i> Kanji</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-tatabahasa" onclick="showFeature('tatabahasa')"><i class="fa-solid fa-book-open"></i> Tata Bahasa</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-kosakata" onclick="showFeature('kosakata')"><i class="fa-solid fa-layer-group"></i> Kosakata</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-percakapan" onclick="showFeature('percakapan')"><i class="fa-solid fa-comments"></i> Percakapan</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-kuis" onclick="showFeature('kuis')"><i class="fa-solid fa-gamepad"></i> Kuis</a></li>
+                <li><a href="javascript:void(0)" class="nav-item" id="nav-ssw" onclick="showFeature('ssw')"><i class="fa-solid fa-briefcase"></i> SSW</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BERANDA / HERO SECTION -->
+    <header class="hero-section feature-view" id="feature-home">
+        <div class="hero-content">
+            <p class="jp-welcome">ようこそ、「日本語が好き」へ！</p>
+            <h1 class="hero-title"><i class="fa-solid fa-torii-gate"></i> Selamat Datang di Nihongo Ga Suki!</h1>
+
+            <!-- Text Berjalan -->
+            <div class="marquee-container">
+                <div class="marquee-text">
+                    日本語を楽しく勉強しましょう！ Mari belajar bahasa Jepang dengan menyenangkan!
+                </div>
+            </div>
+
+            <p class="hero-desc">Pilih modul di bawah ini untuk memulai pembelajaran:</p>
+            
+            <!-- Category Cards Grid -->
+            <div class="hero-grid">
+                <div class="menu-card" onclick="showFeature('kana')">
+                    <div class="card-icon red-icon"><i class="fa-solid fa-font"></i></div>
+                    <div class="card-text">
+                        <h3>Aksara (Kana)</h3>
+                        <p>Hiragana & Katakana</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('kanji')">
+                    <div class="card-icon blue-icon"><i class="fa-solid fa-torii-gate"></i></div>
+                    <div class="card-text">
+                        <h3>Kanji JLPT</h3>
+                        <p>Level N5 - N1</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('tatabahasa')">
+                    <div class="card-icon purple-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="card-text">
+                        <h3>Tata Bahasa</h3>
+                        <p>Pola Kalimat & Bunpou</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('kosakata')">
+                    <div class="card-icon green-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="card-text">
+                        <h3>Kosakata</h3>
+                        <p>Bank Kata & Audio</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('percakapan')">
+                    <div class="card-icon cyan-icon"><i class="fa-solid fa-comments"></i></div>
+                    <div class="card-text">
+                        <h3>Percakapan</h3>
+                        <p>Kaiwa Sehari-hari</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('kuis')">
+                    <div class="card-icon pink-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="card-text">
+                        <h3>Kuis Interaktif</h3>
+                        <p>Latihan & Evaluasi</p>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showFeature('ssw')">
+                    <div class="card-icon yellow-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="card-text">
+                        <h3>SSW</h3>
+                        <p>Materi Pelatihan Kerja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANDUAN BELAJAR -->
+        <div class="info-sections">
+            <div class="info-card">
+                <h2><i class="fa-solid fa-book-open"></i> Panduan Belajar Bahasa Jepang</h2>
+                <ul class="guide-list">
+                    <li><strong>1. Kuasai Kana Terlebih Dahulu:</strong> Mulailah dari Hiragana lalu Katakana.</li>
+                    <li><strong>2. Pelajari Tata Bahasa Dasar:</strong> Pahami pola Subjek + Objek + Kata Kerja.</li>
+                    <li><strong>3. Konsistensi Kosakata:</strong> Targetkan 5–10 kata baru per hari.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fa-solid fa-mountain-sun"></i> Tentang Jepang (日本について)</h2>
+                <p>
+                    Jepang (<i>Nihon / Nippon</i>) adalah negara kepulauan di Asia Timur yang terkenal dengan perpaduan unik antara tradisi kuno dan teknologi modern.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINERS -->
+    <main class="main-container">
+
+        <!-- 1. AKSARA (KANA) -->
+        <section class="content-section feature-view" id="feature-kana" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-font"></i> MODUL 01</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>AKSARA (かな)</h2>
+                <span>Tabel Dasar Hiragana & Katakana</span>
+            </div>
+            <div class="tab-controls">
+                <button class="tab-btn active" id="btn-hiragana" onclick="switchKana('hiragana')">Hiragana (ひらがな)</button>
+                <button class="tab-btn" id="btn-katakana" onclick="switchKana('katakana')">Katakana (カタカナ)</button>
+            </div>
+            <div class="kana-grid" id="kanaGrid"></div>
+        </section>
+
+        <!-- 2. KANJI JLPT -->
+        <section class="content-section feature-view" id="feature-kanji" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-torii-gate"></i> MODUL 02</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>KANJI (漢字)</h2>
+                <span>Kanji Pilihan JLPT N5 - N1</span>
+            </div>
+            <div class="tab-controls">
+                <button class="tab-btn active" onclick="switchKanji('N5')">N5</button>
+                <button class="tab-btn" onclick="switchKanji('N4')">N4</button>
+                <button class="tab-btn" onclick="switchKanji('N3')">N3</button>
+                <button class="tab-btn" onclick="switchKanji('N2')">N2</button>
+                <button class="tab-btn" onclick="switchKanji('N1')">N1</button>
+            </div>
+            <div class="kanji-grid" id="kanjiGrid"></div>
+        </section>
+
+        <!-- 3. TATA BAHASA (BUNPOU) -->
+        <section class="content-section feature-view" id="feature-tatabahasa" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-book-open"></i> MODUL 03</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>TATA BAHASA (文法)</h2>
+                <span>Pola Kalimat & Penjelasan</span>
+            </div>
+            <div class="jlpt-buttons">
+                <button class="filter-btn active" onclick="filterBunpou('all')">Semua Level</button>
+                <button class="filter-btn" onclick="filterBunpou('N5')">JLPT N5</button>
+                <button class="filter-btn" onclick="filterBunpou('N4')">JLPT N4</button>
+                <button class="filter-btn" onclick="filterBunpou('N3')">JLPT N3</button>
+            </div>
+            <div class="bunpou-grid" id="bunpouGrid"></div>
+        </section>
+
+<!-- 4. KOSAKATA (GOI) -->
+        <section class="content-section feature-view" id="feature-kosakata" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-layer-group"></i> MODUL 04</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>KOSAKATA (語彙)</h2>
+                <span id="vocabCount">Menampilkan seluruh kosakata...</span>
+            </div>
+            <div class="control-panel">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Cari Kanji, Romaji, atau Arti..." onkeyup="filterVocab()">
+                </div>
+                <div class="select-wrapper">
+                    <select id="categoryFilter" onchange="filterVocab()">
+                        <option value="all">Semua Kategori</option>
+                        <option value="Benda">Kata Benda</option>
+                        <option value="Kerja">Kata Kerja</option>
+                        <option value="Sifat">Kata Sifat</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- STRUKTUR TABEL KOSAKATA BARU -->
+            <div class="table-responsive">
+                <table class="vocab-table">
+                    <thead>
+                        <tr>
+                            <th>Kanji / Kana</th>
+                            <th>Romaji</th>
+                            <th>Arti</th>
+                            <th>Kategori</th>
+                            <th>Audio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vocabTableBody">
+                        <!-- Data kosakata akan di-render di sini oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- 5. PERCAKAPAN (KAIWA) -->
+        <section class="content-section feature-view" id="feature-percakapan" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-comments"></i> MODUL 05</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>PERCAKAPAN (会話)</h2>
+                <span>Latihan Kaiwa Praktis</span>
+            </div>
+            <div class="conversation-box" id="conversationBox"></div>
+        </section>
+
+        <!-- 6. KUIS INTERAKTIF -->
+        <section class="content-section feature-view" id="feature-kuis" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-gamepad"></i> MODUL 06</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>KUIS INTERAKTIF</h2>
+                <span>Uji Pemahaman Bahasa Jepang</span>
+            </div>
+            <div class="quiz-container">
+                <div id="quizBox">
+                    <h3 id="quizQuestion">Pertanyaan Kuis</h3>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <p id="quizFeedback" class="quiz-feedback"></p>
+                </div>
+                <button id="nextQuizBtn" class="next-btn" onclick="nextQuestion()" style="display: none;">Soal Berikutnya <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- 7. SSW (PELATIHAN KERJA) -->
+        <section class="content-section feature-view" id="feature-ssw" style="display: none;">
+            <div class="feature-badge"><i class="fa-solid fa-briefcase"></i> MODUL 07</div>
+            <button class="back-btn" onclick="showFeature('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama</button>
+            <div class="section-header">
+                <h2>SSW (Specified Skilled Worker)</h2>
+                <span>Pilihan Pelatihan & Sektor Kerja</span>
+            </div>
+            <div class="SSW-buttons">
+                <select id="sswCategoryFilter" onchange="filterSSW()">
+                    <option value="all">Semua Sektor SSW</option>
+                    <option value="Konstruksi">Konstruksi</option>
+                    <option value="Perawat">Perawat (Kaigo)</option>
+                    <option value="Pengolahan Makanan">Pengolahan Makanan</option>
+                    <option value="Pertanian">Pertanian</option>
+                    <option value="Perhotelan">Perhotelan</option>
+                </select>
+            </div>
+            <div class="ssw-grid" id="sswGrid"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTaER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">Nihongo Ga Suki &copy; 2026. All Rights Reserved.</p>
+            <p class="social-ig">
+                Follow Instagram: 
+                <a href="https://instagram.com/dar_mtiin17" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i> @dar_mtiin17
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

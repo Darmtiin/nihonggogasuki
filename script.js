@@ -287,25 +287,58 @@ const bunpouData = [
     { level: "N4", pattern: "~ ています", desc: "Menyatakan kegiatan yang sedang berlangsung.", example: "いま ほんを よんでいます。(Sekarang sedang membaca buku.)" }
 ];
 const vocabData = [
-    { kanji: "食べる", romaji: "Taberu", arti: "Makan", kate: "Kerja" },
-    { kanji: "飲む", romaji: "Nomu", arti: "Minum", kate: "Kerja" },
-    { kanji: "行く", romaji: "Iku", arti: "Pergi", kate: "Kerja" },
-    { kanji: "来る", romaji: "Kuru", arti: "Datang", kate: "Kerja" },
-    { kanji: "帰る", romaji: "Kaeru", arti: "Pulang", kate: "Kerja" },
-    { kanji: "見る", romaji: "Miru", arti: "Melihat / Menonton", kate: "Kerja" },
-    { kanji: "聞く", romaji: "Kiku", arti: "Mendengar / Bertanya", kate: "Kerja" },
-    { kanji: "読む", romaji: "Yomu", arti: "Membaca", kate: "Kerja" },
-    { kanji: "書く", romaji: "Kaku", arti: "Menulis", kate: "Kerja" },
-    { kanji: "話す", romaji: "Hanasu", arti: "Berbicara", kate: "Kerja" },
-    { kanji: "買う", romaji: "Kau", arti: "Membeli", kate: "Kerja" },
-    { kanji: "起きる", romaji: "Okiru", arti: "Bangun tidur", kate: "Kerja" },
-    { kanji: "寝る", romaji: "Neru", arti: "Tidur", kate: "Kerja" },
-    { kanji: "する", romaji: "Suru", arti: "Melakukan", kate: "Kerja" },
-    { kanji: "勉強する", romaji: "Benkyou suru", arti: "Belajar", kate: "Kerja" },
-    { kanji: "歩く", romaji: "Aruku", arti: "Berjalan kaki", kate: "Kerja" },
-    { kanji: "走る", romaji: "Hashiru", arti: "Berlari", kate: "Kerja" },
-    { kanji: "会う", romaji: "Au", arti: "Bertemu", kate: "Kerja" },
-    { kanji: "待つ", romaji: "Matsu", arti: "Menunggu", kate: "Kerja" }
+    //katakerja
+    { kanji: "食べる", hiragana: "たべる", arti: "Makan", kate: "Kerja" },
+    { kanji: "飲む", hiragana: "のむ", arti: "Minum", kate: "Kerja" },
+    { kanji: "行く", hiragana: "いく", arti: "Pergi", kate: "Kerja" },
+    { kanji: "来る", hiragana: "くる", arti: "Datang", kate: "Kerja" },
+    { kanji: "帰る", hiragana: "かえる", arti: "Pulang", kate: "Kerja" },
+    { kanji: "見る", hiragana: "みる", arti: "Melihat / Menonton", kate: "Kerja" },
+    { kanji: "聞く", hiragana: "きく", arti: "Mendengar / Bertanya", kate: "Kerja" },
+    { kanji: "読む", hiragana: "よむ", arti: "Membaca", kate: "Kerja" },
+    { kanji: "書く", hiragana: "かく", arti: "Menulis", kate: "Kerja" },
+    { kanji: "話す", hiragana: "はなす", arti: "Berbicara", kate: "Kerja" },
+    { kanji: "買う", hiragana: "かう", arti: "Membeli", kate: "Kerja" },
+    { kanji: "起きる", hiragana: "おきる", arti: "Bangun tidur", kate: "Kerja" },
+    { kanji: "寝る", hiragana: "ねる", arti: "Tidur", kate: "Kerja" },
+    { kanji: "する", hiragana: "する", arti: "Melakukan", kate: "Kerja" },
+    { kanji: "勉強する", hiragana: "べんきょうする", arti: "Belajar", kate: "Kerja" },
+    { kanji: "歩く", hiragana: "あるく", arti: "Berjalan kaki", kate: "Kerja" },
+    { kanji: "走る", hiragana: "はしる", arti: "Berlari", kate: "Kerja" },
+    { kanji: "会う", hiragana: "あう", arti: "Bertemu", kate: "Kerja" },
+    { kanji: "待つ", hiragana: "まつ", arti: "Menunggu", kate: "Kerja" },
+    //katabenda
+    { kanji: "私", hiragana: "わたし", arti: "Saya", kate: "Benda" },
+    { kanji: "友達", hiragana: "ともだち", arti: "Teman", kate: "Benda" },
+    { kanji: "父", hiragana: "ちち", arti: "Ayah", kate: "Benda" },
+    { kanji: "母", hiragana: "はは", arti: "Ibu", kate: "Benda" },
+    { kanji: "家族", hiragana: "かぞく", arti: "Keluarga", kate: "Benda" },
+    { kanji: "先生", hiragana: "せんせい", arti: "Guru", kate: "Benda" },
+    { kanji: "学生", hiragana: "がくせい", arti: "Murid", kate: "Benda" },
+    { kanji: "学校", hiragana: "がっこう", arti: "Sekolah", kate: "Benda" },
+    { kanji: "椅子", hiragana: "いす", arti: "Kursi", kate: "Benda" },
+    { kanji: "机", hiragana: "つくえ", arti: "Meja", kate: "Benda" },
+    { kanji: "病院", hiragana: "びょういん", arti: "Rumah Sakit", kate: "Benda" },
+    { kanji: "公園", hiragana: "こうえん", arti: "Taman", kate: "Benda" },
+    { kanji: "駅", hiragana: "えき", arti: "Stasiun", kate: "Benda" },
+    
+    { kanji: "水", hiragana: "みず", arti: "Air", kate: "Benda" },
+    { kanji: "ー", hiragana: "はさみ", arti: "Gunting", kate: "Benda" },
+    { kanji: "ー", hiragana: "ペン", arti: "Pulen", kate: "Benda" },
+    { kanji: "空", hiragana: "そら", arti: "Langit", kate: "Benda" },
+    { kanji: "雨", hiragana: "あめ", arti: "Hujan", kate: "Benda" },
+    { kanji: "世界", hiragana: "せかい", arti: "Dunia", kate: "Benda" },
+    { kanji: "雪", hiragana: "ゆき", arti: "Salju", kate: "Benda" },
+    { kanji: "花", hiragana: "はな", arti: "Bunga", kate: "Benda" },
+    { kanji: "花火", hiragana: "はなび", arti: "Kembang Api", kate: "Benda" },
+    { kanji: "夏", hiragana: "なつ", arti: "Musim Panas", kate: "Benda" },
+    { kanji: "春", hiragana: "はる", arti: "Musim Semi", kate: "Benda" },
+    { kanji: "秋", hiragana: "あき", arti: "Musim Gugur", kate: "Benda" },
+    { kanji: "冬", hiragana: "ふゆ", arti: "Musim Dingin", kate: "Benda" },
+
+    
+    
+
 ];
 
 const conversationData = [
@@ -442,7 +475,7 @@ function filterVocab() {
 
     const filtered = vocabData.filter(item => {
         const matchesSearch = item.kanji.toLowerCase().includes(searchVal) ||
-                              item.romaji.toLowerCase().includes(searchVal) ||
+                              item.hiragana.toLowerCase().includes(searchVal) ||
                               item.arti.toLowerCase().includes(searchVal);
         const matchesCat = catVal === 'all' || item.kate === catVal;
         return matchesSearch && matchesCat;
@@ -460,7 +493,7 @@ function filterVocab() {
         tbody.innerHTML = filtered.map(item => `
             <tr>
                 <td><span class="jp-text">${item.kanji}</span></td>
-                <td><span class="romaji-text">${item.romaji}</span></td>
+                <td><span class="hiragana-text">${item.hiragana}</span></td>
                 <td>${item.arti}</td>
                 <td><span class="table-badge">${item.kate}</span></td>
                 <td>

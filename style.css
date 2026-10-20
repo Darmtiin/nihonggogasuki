@@ -39,7 +39,7 @@ body {
 
 .nav-container {
     width: 100%;
-    max-width:1200;
+    max-width: 1200px; /* Perbaikan dari 1200 ke 1200px */
     margin: 0 auto;
     padding: 10px 20px;
     display: flex;
@@ -66,6 +66,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
+    flex-shrink: 0;
 }
 
 .header-logo {
@@ -94,6 +95,8 @@ body {
     list-style: none;
     gap: 6px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
 }
 
 .nav-item {
@@ -324,6 +327,8 @@ body {
     color: #fff;
     outline: none;
     font-size: 0.95rem;
+    width: 100%;
+    max-width: 300px;
 }
 
 /* ==========================================
@@ -331,7 +336,7 @@ body {
    ========================================== */
 .kana-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 15px;
 }
 
@@ -360,7 +365,7 @@ body {
    ========================================== */
 .kanji-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 15px;
 }
 
@@ -435,10 +440,12 @@ body {
     overflow-x: auto;
     border-radius: 10px;
     border: 1px solid var(--card-border);
+    -webkit-overflow-scrolling: touch;
 }
 
 .vocab-table {
     width: 100%;
+    min-width: 500px; /* Menjaga bentuk tabel di layar kecil */
     border-collapse: collapse;
     background: #0f172a;
     text-align: left;
@@ -468,7 +475,7 @@ body {
     color: #ffffff;
 }
 
-.vocab-table td .romaji-text {
+.vocab-table td .hiragana-text {
     color: var(--accent-blue);
     font-weight: 600;
 }
@@ -661,4 +668,109 @@ body {
     color: var(--accent-blue);
     text-decoration: none;
     font-weight: 600;
+}
+
+/* ==========================================
+   13. MEDIA QUERIES (RESPONSIF HP & TABLET)
+   ========================================== */
+
+/* Pengaturan untuk Layar HP / Tablet (Maksimal 768px) */
+@media screen and (max-width: 768px) {
+    /* Navbar Adjustment */
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .logo-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-title {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Section Adjustment */
+    .hero-section {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .jp-welcome {
+        font-size: 1.1rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr; /* 1 Kolom penuh di HP */
+        gap: 12px;
+    }
+
+    /* Main Content & Section Adjustment */
+    .main-container {
+        padding: 0 12px;
+        margin: 15px auto 30px;
+    }
+
+    .content-section {
+        padding: 20px 15px;
+    }
+
+    .feature-badge {
+        right: 15px;
+        font-size: 0.7rem;
+    }
+
+    /* Modul Cards Adjustment */
+    .kana-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .kana-main, .kanji-main {
+        font-size: 1.8rem;
+    }
+
+    .kanji-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+    }
+
+    .bunpou-grid, .ssw-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-bubble {
+        max-width: 90%;
+    }
+
+    /* Footer Adjustment */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+/* Pengaturan untuk Layar HP Sangat Kecil (Maksimal 480px) */
+@media screen and (max-width: 480px) {
+    .kana-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .tab-btn, .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
